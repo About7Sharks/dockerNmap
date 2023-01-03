@@ -1,0 +1,16 @@
+.App{
+  display: grid;
+  place-content: center;
+}
+html{
+  background-color: rgba(14, 13, 13, 0.096);
+}
+/* .MuiDataGrid-root{
+  color: white !important;
+} */
+.online{
+  color: green;
+}
+.offline{
+  color: red;
+}
