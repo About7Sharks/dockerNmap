@@ -1,5 +1,4 @@
 import { DataGrid, GridColDef, GridCellParams } from '@mui/x-data-grid';
-import rows from '../../../data/data.json'
 import clsx from 'clsx';
 import Stack from '@mui/material/Stack';
 
@@ -18,20 +17,20 @@ const columns: GridColDef[] = [
   }
 ];
 
-export default function DataTable() {
+export default function DataTable({data}) {
   return (
   <div style={{ width: '860px'}}>
        <h1>Network Data</h1>
        <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
           {/* count total online devices */}
-          <span><b>Online</b>: {rows.filter(row => row.online).length}</span> 
+          <span><b>Online</b>: {data.filter(row => row.online).length}</span> 
           {/* count total offline devices */}
-          <span><b>Offline</b>: {rows.filter(row => !row.online).length}</span>
+          <span><b>Offline</b>: {data.filter(row => !row.online).length}</span>
           {/* count total devices */}
-          <span><b>Total</b> :{rows.length}</span>
+          <span><b>Total</b> :{data.length}</span>
         </Stack>
         <DataGrid 
-          rows={rows}
+          rows={data}
           sx={{backgroundColor: 'white', borderRadius: 5,}}
           columns={columns}
           pageSize={25}

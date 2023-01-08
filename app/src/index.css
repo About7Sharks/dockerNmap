@@ -14,3 +14,9 @@ html{
 .offline{
   color: red;
 }
+
+#frequency{
+  background-color: white;
+  border-radius: 25px;
+  padding-top: 5px;
+}

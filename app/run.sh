@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Run nmap
-nmap -sP 192.168.68.0/24 -oA /data/scan
+nmap -sP 192.168.68.0/24 -oA ./data/scan
 # Check if nmap was successful
 if [ $? -eq 0 ]; then
   # Run the parser script
